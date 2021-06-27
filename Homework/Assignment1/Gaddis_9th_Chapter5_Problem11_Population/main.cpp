@@ -26,7 +26,6 @@ int main(int argc, char** argv) {
     int days;      //Days of growth
     int day;       //Current Day
     int newDay;    //New day's growth
-    int lastDay;   //Last day's growth
     float perGrow; //Percentage of daily growth
     float wholePer;//Percentage converted to whole number
     
@@ -58,7 +57,6 @@ int main(int argc, char** argv) {
     //Process Inputs to Outputs -> Mapping Process
     //Maps known values to the unknown objectives
     wholePer = perGrow / 100;
-    cout << wholePer << endl;
     
     //Display the Inputs/Outputs
     for (int i = 0; i < days; i++) {
@@ -66,15 +64,13 @@ int main(int argc, char** argv) {
             day = i + 1;
             newDay = (popStart * wholePer) + popStart;
             cout << "Day " << day << ": Population growth of " << newDay << endl;
-            lastDay = newDay;
-            cout << lastDay << endl;
+            popStart = popStart + newDay;
         }
         else {
             day = i + 1;
-            newDay = (lastDay * wholePer) + lastDay;
-            cout << newDay << endl;
+            newDay = (popStart * wholePer) + popStart;
             cout << "Day " << day << ": Population growth of " << newDay << endl;
-            lastDay = newDay;
+            popStart = popStart + newDay;
         }
     }
     
