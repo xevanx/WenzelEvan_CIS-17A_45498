@@ -1,32 +1,39 @@
-/* 
+/*
  * File:   main.cpp
- * Author: Evan Wenzel
- * Created on June 25, 2020, 4:52 PM
- * Purpose: Creating a Hello World Program
+ * Author: Dr. Mark E. Lehr
+ * Purpose:  Code-E visual output guide.
+ *       Spaces, tabs, newline, setting the width, etc.....
  */
 
-//System Libraries
-#include <iostream>  //I/O Library
+//System Librarys
+#include <iostream>  //Input/Output Library
+#include <iomanip>   //Format Library
 using namespace std;
 
 //User Libraries
 
-//Global Constants Only
-//Well known Science, Mathematical and Laboratory Constants
+//Global Constants, no Global Variables are allowed
+//Math/Physics/Conversions/Higher Dimensions - i.e. PI, e, etc...
 
 //Function Prototypes
 
-//Execution of Code Begins Here
+//Execution Begins Here!
 int main(int argc, char** argv) {
-    //Declare all variables for this function
-    
-    //Initialize all known variables
-
-    //Process Inputs to Outputs -> Mapping Process
-    //Maps known values to the unknown objectives
-    
-    //Display the Inputs/Outputs
-    cout << "Hello World" << endl;
-    //Exit stage right
+    //Declare a Variable, i.e. an integer
+    int number;
+    //Display various output results in Code-E
+    //8 Spaces with a new line
+    cout<<"        "<<endl;
+    //8 Spaces with a new line
+    cout<<"        \n";
+    //A Tab with 8 Spaces and a new line
+    cout<<"\t     \n";
+    //Read the value of a number as input and output twice separated by 6 spaces
+    cin>>number;
+    cout<<number<<"      "<<number<<endl;
+    //Read another number as input then  output twice separated by 6 spaces
+    cin>>number;
+    cout<<number<<setw(7)<<number<<endl;
+    //Exit stage right or left!
     return 0;
 }
